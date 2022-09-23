@@ -1,0 +1,13 @@
+<%= flash[:notice] %>
+
+<h1>Kittens</h1>
+
+<ul>
+  <% @kittens.each do |kitten| %>
+    <li>
+      <%= link_to kitten.name, kitten %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Kitten", new_kitten_path %>
